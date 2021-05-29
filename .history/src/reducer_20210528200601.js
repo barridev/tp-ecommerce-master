@@ -1,0 +1,27 @@
+export const initialState = {
+    basket: [],
+    loggedinuser: null
+}
+
+const reducer = (state, action) => {
+    console.log(action);
+    // eslint-disable-next-line
+    switch(action.type){
+        case 'ADD_TO_BASKET':
+            return{
+                ...state,
+                basket: [...state.basket, action.item]
+            }
+        case 'SET_LOGIN':
+            return{
+                ...state,
+                loggedinuser: action.user
+            }
+        case 'REMOVE_FROM_CART'
+            
+        
+            
+    }
+}
+
+export default reducer 
